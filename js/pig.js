@@ -82,7 +82,7 @@ hold.addEventListener('click', function() {
         playerscoretext.textContent = playerscore;
         totalscoretext.textContent = totalscore;
 
-        if (totalscore >= 20) {
+        if (totalscore >= 100) {
             message.textContent = 'You Win after ' + totalturns + ' turns!';
             gamePlaying = false;
         }
