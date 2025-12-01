@@ -9,6 +9,7 @@ const reset = document.getElementById('reset');
 
 const playerscoretext = document.getElementById('playerscore');
 const totalscoretext = document.getElementById('totalscore');
+const totalturns = document.getElementById('totalturns');
 const message = document.getElementById('message');
 const playername = document.getElementById('playername');
 const storedName = localStorage.getItem('playerName');
@@ -79,6 +80,7 @@ hold.addEventListener('click', function() {
     if (gamePlaying) {
         totalscore += playerscore;
         playerscore = 0;
+        totalturns.textContent = totalturns;
         playerscoretext.textContent = playerscore;
         totalscoretext.textContent = totalscore;
 
