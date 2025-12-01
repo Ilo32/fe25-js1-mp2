@@ -64,6 +64,7 @@ rolldie.addEventListener('click', function() {
                     playerscoretext.textContent = playerscore;
                 } else {
                     totalturns++;
+                    totalturnstext.textContent = totalturns;
                     playerscore = 0;
                     playerscoretext.textContent = playerscore;
                 }
