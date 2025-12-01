@@ -50,8 +50,6 @@ rolldie.addEventListener('click', function() {
             
             if (animationCount >= animationRolls) {
                 clearInterval(animateRoll);
-                
-                totalturns++;
                 const die = DieRoll(1, 7);
                 
                 dieDOM.innerHTML = '';
@@ -65,6 +63,7 @@ rolldie.addEventListener('click', function() {
                     playerscore += die;
                     playerscoretext.textContent = playerscore;
                 } else {
+                    totalturns++;
                     playerscore = 0;
                     playerscoretext.textContent = playerscore;
                 }
@@ -80,6 +79,7 @@ hold.addEventListener('click', function() {
     if (gamePlaying) {
         totalscore += playerscore;
         playerscore = 0;
+        totalturns++;
         totalturnstext.textContent = totalturns;
         playerscoretext.textContent = playerscore;
         totalscoretext.textContent = totalscore;
@@ -95,6 +95,7 @@ reset.addEventListener('click', function() {
     gamePlaying = true;
     playerscore = 0;
     totalscore = 0;
+    totalturns = 0;
     playerscoretext.textContent = playerscore;
     totalscoretext.textContent = totalscore;
     message.textContent = '';
